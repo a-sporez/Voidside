@@ -28,6 +28,7 @@ func ConnectDatabase() {
 	if err != nil {
 		log.Fatal("Failed to connect to db:", err)
 	}
-	database.AutoMigrate(&models.Post{}) // generate tables
-	DB = database                        // Assign to global
+	// generate tables and assign to global database
+	database.AutoMigrate(&models.Post{}, &models.User{})
+	DB = database
 }

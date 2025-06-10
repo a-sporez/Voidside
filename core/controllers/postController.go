@@ -1,4 +1,4 @@
-// /controller/postController.go
+// /controller/posts.go
 // Each function here is a handler for an API route
 package controllers
 

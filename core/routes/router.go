@@ -9,13 +9,19 @@ import (
 
 // Maps endpoints to controllers and returns the Gin engine.
 func SetupRouter() *gin.Engine {
-	r := gin.Default()
+	router := gin.Default()
 
-	r.GET("/posts", controllers.GetPost)
-	r.GET("/posts/:id", controllers.GetPost)
-	r.POST("/posts", controllers.CreatePost)
-	r.PUT("/posts/:id", controllers.UpdatePost)
-	r.DELETE("/posts/:id", controllers.DeletePost)
+	router.GET("/posts", controllers.GetPosts)
+	router.GET("/posts/:id", controllers.GetPost)
+	router.POST("/posts", controllers.CreatePost)
+	router.PUT("/posts/:id", controllers.UpdatePost)
+	router.DELETE("/posts/:id", controllers.DeletePost)
 
-	return r
+	router.GET("/users", controllers.GetUsers)
+	router.GET("/users/:id", controllers.GetUser)
+	router.POST("/users", controllers.CreateUser)
+	router.PUT("/users/:id", controllers.UpdateUser)
+	router.DELETE("/users/:id", controllers.DeleteUser)
+
+	return router
 }
