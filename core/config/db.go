@@ -4,7 +4,7 @@ package config
 import (
 	"log"
 
-	"Voidside/models"
+	"core/models"
 
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"

@@ -2,8 +2,8 @@
 package main
 
 import (
-	"Voidside/config"
-	"Voidside/routes"
+	"core/config"
+	"core/routes"
 )
 
 func main() {

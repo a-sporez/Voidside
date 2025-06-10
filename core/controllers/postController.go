@@ -5,8 +5,8 @@ package controllers
 import (
 	"net/http"
 
-	"Voidside/config"
-	"Voidside/models"
+	"core/config"
+	"core/models"
 
 	"github.com/gin-gonic/gin"
 )

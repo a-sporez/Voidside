@@ -2,7 +2,7 @@
 package routes
 
 import (
-	"Voidside/controllers"
+	"core/controllers"
 
 	"github.com/gin-gonic/gin"
 )
