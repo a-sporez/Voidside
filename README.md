@@ -10,7 +10,9 @@ RESTful API, HTTP server.
 
 ## Dependencies
 
-- https://github.com/gin-gonic/gin
-- https://gorm.io/gorm
-- https://github.com/glebarez/sqlite
-- https://github.com/joho/godotenv
+- <https://github.com/gin-gonic/gin>
+- <https://gorm.io/gorm>
+- <https://github.com/glebarez/sqlite>
+- <https://github.com/joho/godotenv>
+- <https://github.com/MicahParks/keyfunc>
+- <https://github.com/golang-jwt/jwt/v5>
