@@ -1,10 +1,16 @@
 # Voidside
 
+## Modules
+
+### Core
+
+RESTful API, HTTP server.
+
 [API entry](main.go)
 
 ## Dependencies
 
-    - `go get github.com/gin-gonic/gin`
-    - `go get gorm.io/gorm`
-    - `go get gorm.io/driver/sqlite`
-    - `go get github.com/joho/godotenv`
+- https://github.com/gin-gonic/gin
+- https://gorm.io/gorm
+- https://github.com/glebarez/sqlite
+- https://github.com/joho/godotenv
