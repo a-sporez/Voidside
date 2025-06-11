@@ -6,6 +6,7 @@ import (
 	"net/http"
 
 	"core/config"
+	"core/dto"
 	"core/models"
 
 	"github.com/gin-gonic/gin"
@@ -13,7 +14,7 @@ import (
 
 // Writes new entry to the databasa.
 func CreateUser(c *gin.Context) {
-	var input models.User
+	var input dto.CreateUserInput
 	if err := c.ShouldBindJSON(&input); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
@@ -47,7 +48,7 @@ func UpdateUser(c *gin.Context) {
 		c.JSON(http.StatusNotFound, gin.H{"error": "cannot find user"})
 		return
 	}
-	var input models.User
+	var input dto.UpdateUserInput
 	if err := c.ShouldBindJSON(&input); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
