@@ -12,7 +12,7 @@
 
 #### **Key packages**
 
-- [API entry](main.go)
+- [API entry](core/main.go)
 - [Post controller](core/controllers/postController.go)
 - [User controller](core/controllers/userController.go)
 - [Post models](core/models/post.go)
