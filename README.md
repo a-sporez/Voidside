@@ -4,9 +4,20 @@
 
 ### Core
 
-RESTful API, HTTP server.
+- Gin framework implementation.
+- RESTful API HTTP server.
+- ORM database library.
+- SQLite driver.
+- Keycloak JWKS.
 
-[API entry](main.go)
+#### **Key packages**
+
+- [API entry](main.go)
+- [Post controller](core/controllers/postController.go)
+- [User controller](core/controllers/userController.go)
+- [Post models](core/models/post.go)
+- [User models](core/models/user.go)
+- [Routes](core/routes/router.go)
 
 ## Dependencies
 
