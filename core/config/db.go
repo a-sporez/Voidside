@@ -18,7 +18,7 @@ var DB *gorm.DB
 // gorm.Open() connects to SQLite DB
 func ConnectDatabase() {
 	// load DB path from env
-	_ = godotenv.Load("env/.env")
+	_ = godotenv.Load()
 	dbPath := os.Getenv("DB_PATH")
 	if dbPath == "" {
 		dbPath = "default.db" // fallback

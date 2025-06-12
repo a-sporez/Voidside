@@ -29,6 +29,8 @@ func SetupRouter() *gin.Engine {
 		protected.GET("/users/:id", controllers.GetUser)
 		protected.PUT("/users/:id", controllers.UpdateUser)
 		protected.DELETE("/users/:id", controllers.DeleteUser)
+
+		protected.POST("/proxy/chat", controllers.ProxyChatHandler)
 	}
 
 	return router
