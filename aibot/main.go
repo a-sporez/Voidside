@@ -125,11 +125,11 @@ func trimMemory(messages []Message, limit int) []Message {
 }
 
 func callMistral(userID string) (string, error) {
-	mistralURL := os.Getenv("MISTRAL_URL")
-	bearerToken := os.Getenv("MISTRAL_TOKEN") // this is safer than hardcoding
+	mistralURL := os.Getenv("LLM_URL")
+	bearerToken := os.Getenv("LLM_TOKEN") // this is safer than hardcoding
 
 	if mistralURL == "" || bearerToken == "" {
-		log.Fatal("Missing MISTRAL_URL or MISTRAL_TOKEN in .env")
+		log.Fatal("Missing LLM_URL or LLM_TOKEN in .env")
 	}
 
 	history := trimMemory(memoryStore[userID], 5)
