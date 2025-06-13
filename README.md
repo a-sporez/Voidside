@@ -1,5 +1,19 @@
 # Voidside
 
+## Docker
+
+From the root folder:
+
+```bash
+docker-compose up --build
+```
+
+To rebuild just one of the services:
+
+```bash
+docker-compose up --build core
+```
+
 ## Curl testing
 
 It's a wonderful thing, use it.
