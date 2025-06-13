@@ -29,7 +29,7 @@ services:
       dockerfile: Dockerfile
     container_name: ggbot_service
     env_file:
-      - ./aibot/.env
+      - ./ggbot/.env
     restart: unless-stopped
     depends_on:
       - core
