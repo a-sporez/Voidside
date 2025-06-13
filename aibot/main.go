@@ -13,7 +13,7 @@ import (
 func main() {
 	err := godotenv.Load()
 	if err != nil {
-		log.Println("No .env file found; using system env vars")
+		log.Println("No .env file found; using system env")
 	}
 
 	port := os.Getenv("PORT")

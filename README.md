@@ -12,7 +12,7 @@ curl -X POST http://localhost:8080/chat \
 
 ## Modules
 
-### Core
+### Core (API)
 
 - Gin framework implementation.
 - RESTful API HTTP server.
@@ -20,14 +20,38 @@ curl -X POST http://localhost:8080/chat \
 - SQLite driver.
 - Keycloak JWKS.
 
-#### **Key packages**
+#### *Core Key Packages*
 
-- [API entry](core/main.go)
+- [Runtime](core/main.go)
 - [Post controller](core/controllers/postController.go)
 - [User controller](core/controllers/userController.go)
-- [Post models](core/models/post.go)
-- [User models](core/models/user.go)
 - [Routes](core/routes/router.go)
+
+### Aibot (LLM bridge microservice)
+
+- Gin framework implementation.
+- Bridge JSON payload with LLM services.
+- Temporary context window memory of messages and users.
+- Static Key Auth.
+
+#### *Aibot Key Packages*
+
+- [Runtime](aibot/main.go)
+- [Handler](aibot/handlers/chat.go)
+- [Bridge](aibot/llm/client.go)
+- [Memory](aibot/internal/store.go)
+
+### Ggbot (Discord microservice)
+
+- Gin framework implementation.
+- Bridge JSON payload with Discord.
+- Discord API endpoint connection.
+- Static Key Auth.
+
+#### *Ggbot Key Packages*
+
+- [Runtime](ggbot/main.go)
+- [Handler](ggbot/handlers/chat.go)
 
 ## Dependencies
 
