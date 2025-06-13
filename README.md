@@ -1,5 +1,15 @@
 # Voidside
 
+## Curl testing
+
+It's a wonderful thing, use it.
+
+```bash
+curl -X POST http://localhost:8080/chat \
+-H "Content-Type: application/json" \
+-d '{"user":"test", "message":"are you functional?"}'
+```
+
 ## Modules
 
 ### Core
