@@ -12,7 +12,7 @@ import (
 )
 
 func main() {
-	_ = godotenv.Load("env/.env")
+	_ = godotenv.Load(".env")
 
 	config.ConnectDatabase() // instantiate DB and store globally
 
