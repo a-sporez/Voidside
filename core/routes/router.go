@@ -15,6 +15,8 @@ func SetupRouter() *gin.Engine {
 	// public routes
 	router.POST("/users", controllers.CreateUser)
 
+	router.POST("/proxy/chat", controllers.ProxyChatHandler)
+
 	// protected routes
 	protected := router.Group("/")
 	protected.Use(middleware.AuthRequired())
@@ -29,8 +31,6 @@ func SetupRouter() *gin.Engine {
 		protected.GET("/users/:id", controllers.GetUser)
 		protected.PUT("/users/:id", controllers.UpdateUser)
 		protected.DELETE("/users/:id", controllers.DeleteUser)
-
-		protected.POST("/proxy/chat", controllers.ProxyChatHandler)
 	}
 
 	return router
