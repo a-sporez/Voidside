@@ -3,7 +3,6 @@ package main
 
 import (
 	"core/config"
-	"core/middleware"
 	"core/routes"
 	"log"
 	"os"
@@ -16,7 +15,7 @@ func main() {
 
 	config.ConnectDatabase() // instantiate DB and store globally
 
-	middleware.InitJWT() // initialize keycloak JWKS
+	//middleware.InitJWT() // initialize keycloak JWKS
 
 	r := routes.SetupRouter() // Return Gin engine with routes mounted.
 
