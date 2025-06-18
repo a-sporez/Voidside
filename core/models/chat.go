@@ -1,6 +1,6 @@
 package models
 
 type ChatMessage struct {
-	UserID  string `json:"user"`
+	UserID  string `json:"userId"`
 	Message string `json:"message"`
 }
