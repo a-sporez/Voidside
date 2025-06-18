@@ -1,7 +1,7 @@
 package models
 
 type ChatRequest struct {
-	User    string `json:"user"`
+	User    string `json:"userId"`
 	Message string `json:"message"`
 }
 
