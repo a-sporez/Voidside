@@ -2,7 +2,7 @@ package models
 
 // incoming message structure
 type ChatInput struct {
-	UserID  string `json:"user"` // from discord or internal systems
+	UserID  string `json:"userId"` // from discord or internal systems
 	Message string `json:"message"`
 }
 
